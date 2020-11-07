@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - LobbyUI
     - SceneLoader
     - SystemBoot
+    - TempObject
     PhotonUnityNetworking.Demos.dll:
     - Photon.Pun.Demo.Asteroids.Asteroid
     - Photon.Pun.Demo.Asteroids.Bullet
@@ -17,6 +18,8 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
+    PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -69,11 +72,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10376}
     - Class: 114
-      Script: {instanceID: 11346}
+      Script: {instanceID: 11302}
     - Class: 114
-      Script: {instanceID: 11764}
+      Script: {instanceID: 11350}
     - Class: 114
-      Script: {instanceID: 21522}
+      Script: {instanceID: 11768}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -158,23 +161,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11010}
     - Class: 114
-      Script: {instanceID: 11204}
+      Script: {instanceID: 11206}
     - Class: 114
-      Script: {instanceID: 11214}
+      Script: {instanceID: 11216}
     - Class: 114
-      Script: {instanceID: 11222}
+      Script: {instanceID: 11224}
     - Class: 114
-      Script: {instanceID: 11228}
+      Script: {instanceID: 11230}
     - Class: 114
-      Script: {instanceID: 11346}
+      Script: {instanceID: 11350}
     - Class: 114
-      Script: {instanceID: 11690}
+      Script: {instanceID: 11694}
     - Class: 114
-      Script: {instanceID: 11764}
+      Script: {instanceID: 11768}
     - Class: 114
-      Script: {instanceID: 11796}
+      Script: {instanceID: 11800}
     - Class: 114
-      Script: {instanceID: 11804}
+      Script: {instanceID: 11808}
+    - Class: 114
+      Script: {instanceID: 36018}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -258,13 +263,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11024}
     - Class: 114
-      Script: {instanceID: 11346}
+      Script: {instanceID: 11350}
     - Class: 114
-      Script: {instanceID: 11382}
+      Script: {instanceID: 11386}
     - Class: 114
-      Script: {instanceID: 11690}
+      Script: {instanceID: 11694}
     - Class: 114
-      Script: {instanceID: 11764}
+      Script: {instanceID: 11768}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1080,7 +1085,7 @@ ScriptsOnlyBuild:
     className: SplineWalker
   - hash:
       serializedVersion: 2
-      Hash: 28c6ff13ee074fd4a3a33b64a2328763
+      Hash: 17ce384572983bf7b3141155f5d6aa80
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LobbyManager
@@ -1252,6 +1257,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: 
     className: ScoreHelper
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameCore
   - hash:
       serializedVersion: 2
       Hash: e80cf4684910fdd7f091d85a19a93603
@@ -1617,11 +1628,11 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: GameCore
+    className: TempObject
   platform: 5
   scenePathNames:
   - Assets/Scenes/Launcher.unity
   - Assets/Scenes/Loading.unity
   - Assets/Scenes/Lobby.unity
   - Assets/Scenes/Game.unity
-  playerPath: "C:/Users/syk_0/Desktop/\uD53C\uCF54\uBAA8/Picosmos.exe"
+  playerPath: "C:/Users/syk_0/Desktop/\uD53C\uCF54\uBAA8 \uBE4C\uB4DC/Picosmos.exe"

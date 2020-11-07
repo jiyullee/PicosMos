@@ -10,9 +10,10 @@ public class LobbyManager : PunTeams
 {
     public static LobbyManager Instance;
     public Text stateText;
+    public Text IDText;
     public const int MAX_TEAM_PICO = 5;
     public const int MAX_TEAM_MO = 5;
-    public const string ROOM_NAME = "Test_2";
+    public const string ROOM_NAME = "Test_4";
     public static string UserId;
 
     public RecoverDisconnect recoverDisconnect;
@@ -31,16 +32,16 @@ public class LobbyManager : PunTeams
             authValues.AuthType = CustomAuthenticationType.Custom;
             authValues.UserId = UserId;
             Debug.Log(UserId);
-            PlayerPrefs.SetString("UserId", UserId);
+            IDText.text = UserId;
             authValues.AddAuthParameter("user", UserId);
             PhotonNetwork.AuthValues = authValues;
         }
 
+        PhotonNetwork.AutomaticallySyncScene = true;
         PhotonNetwork.GameVersion = "1.0";
         
         recoverDisconnect = new RecoverDisconnect();
-        if(!PhotonNetwork.Reconnect())
-            Connect();
+        Connect();
 
     }
 
@@ -58,8 +59,8 @@ public class LobbyManager : PunTeams
                 MaxPlayers = 20,
                 IsOpen = true,
                 IsVisible = true,
-                EmptyRoomTtl = 360000,
-                PlayerTtl = 360000,
+                EmptyRoomTtl = 60000,
+                PlayerTtl = 60000,
                 PublishUserId = true,
             };
             PhotonNetwork.CreateRoom(ROOM_NAME, roomOptions);
@@ -75,10 +76,10 @@ public class LobbyManager : PunTeams
 
         PlayerPrefs.SetString("UserId", PhotonNetwork.AuthValues.UserId);
 
-
+        PhotonNetwork.JoinLobby();
         LobbyUI.Instance.SetViewEnterSeasonBtn(true);
 
-        PhotonNetwork.JoinLobby();
+      
     }
 
     public override void OnJoinedLobby()
@@ -86,7 +87,11 @@ public class LobbyManager : PunTeams
         Debug.Log("Joined Lobby");
         stateText.text = "Joined Lobby";
 
-        PhotonNetwork.RejoinRoom(ROOM_NAME);
+        PhotonNetwork.Reconnect();
+        if (PhotonNetwork.RejoinRoom(ROOM_NAME) && PhotonNetwork.IsMasterClient)
+        {
+            PhotonNetwork.LoadLevel("Game");
+        }
     }
 
     public override void OnCreatedRoom()
@@ -118,6 +123,7 @@ public class LobbyManager : PunTeams
     public override void OnJoinRoomFailed(short returnCode, string message)
     {
         Debug.Log(message);
+        stateText.text = message;
         recoverDisconnect.OnJoinRandomFailed(returnCode, message);
     }
 
@@ -164,5 +170,7 @@ public class LobbyManager : PunTeams
     public override void OnDisconnected(DisconnectCause cause)
     {
         recoverDisconnect.OnDisconnected(cause);
+        
     }
+
 }

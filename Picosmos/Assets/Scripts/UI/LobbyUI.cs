@@ -67,7 +67,13 @@ public class LobbyUI : PunTeams
     private void StartGame()
     {
         // 게임 씬 입장
-        PhotonNetwork.LoadLevel(3);
-        PhotonNetwork.AutomaticallySyncScene = true;
+       
+        if (PhotonNetwork.IsMasterClient)
+        {
+            Debug.Log("Load Game Scene");
+            PhotonNetwork.LoadLevel("Game");
+           
+        }
+        
     }
 }
