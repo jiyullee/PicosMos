@@ -1,9 +1,10 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - GameCore
     - LoadingUI
+    - LobbyManager
     - LobbyUI
-    - NetworkManager
     - SceneLoader
     - SystemBoot
     PhotonUnityNetworking.Demos.dll:
@@ -42,6 +43,49 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
+    Assets/Scenes/Game.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9686}
+    - Class: 114
+      Script: {instanceID: 9882}
+    - Class: 114
+      Script: {instanceID: 10376}
+    - Class: 114
+      Script: {instanceID: 11346}
+    - Class: 114
+      Script: {instanceID: 11764}
+    - Class: 114
+      Script: {instanceID: 21522}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
     Assets/Scenes/Launcher.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -88,49 +132,49 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9844}
     - Class: 114
-      Script: {instanceID: 9880}
+      Script: {instanceID: 9868}
     - Class: 114
-      Script: {instanceID: 9924}
+      Script: {instanceID: 9882}
     - Class: 114
-      Script: {instanceID: 10292}
+      Script: {instanceID: 9926}
     - Class: 114
-      Script: {instanceID: 10370}
+      Script: {instanceID: 10048}
     - Class: 114
-      Script: {instanceID: 10434}
+      Script: {instanceID: 10296}
     - Class: 114
-      Script: {instanceID: 10616}
+      Script: {instanceID: 10376}
     - Class: 114
-      Script: {instanceID: 10678}
+      Script: {instanceID: 10440}
     - Class: 114
-      Script: {instanceID: 10844}
+      Script: {instanceID: 10624}
     - Class: 114
-      Script: {instanceID: 10914}
+      Script: {instanceID: 10686}
     - Class: 114
-      Script: {instanceID: 10992}
+      Script: {instanceID: 10852}
     - Class: 114
-      Script: {instanceID: 11000}
+      Script: {instanceID: 10924}
     - Class: 114
-      Script: {instanceID: 11198}
+      Script: {instanceID: 11002}
     - Class: 114
-      Script: {instanceID: 11206}
+      Script: {instanceID: 11010}
     - Class: 114
-      Script: {instanceID: 11212}
+      Script: {instanceID: 11204}
     - Class: 114
-      Script: {instanceID: 11330}
+      Script: {instanceID: 11214}
     - Class: 114
-      Script: {instanceID: 11670}
+      Script: {instanceID: 11222}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11228}
     - Class: 114
-      Script: {instanceID: 11776}
+      Script: {instanceID: 11346}
     - Class: 114
-      Script: {instanceID: 11784}
+      Script: {instanceID: 11690}
     - Class: 114
-      Script: {instanceID: 14866}
+      Script: {instanceID: 11764}
     - Class: 114
-      Script: {instanceID: 14886}
+      Script: {instanceID: 11796}
     - Class: 114
-      Script: {instanceID: 15368}
+      Script: {instanceID: 11804}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -204,21 +248,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9686}
     - Class: 114
-      Script: {instanceID: 9880}
+      Script: {instanceID: 9882}
     - Class: 114
-      Script: {instanceID: 9924}
+      Script: {instanceID: 9926}
     - Class: 114
-      Script: {instanceID: 10370}
+      Script: {instanceID: 10376}
     - Class: 114
-      Script: {instanceID: 10792}
+      Script: {instanceID: 10800}
     - Class: 114
-      Script: {instanceID: 11330}
+      Script: {instanceID: 11024}
     - Class: 114
-      Script: {instanceID: 11744}
+      Script: {instanceID: 11346}
     - Class: 114
-      Script: {instanceID: 19888}
+      Script: {instanceID: 11382}
     - Class: 114
-      Script: {instanceID: 20276}
+      Script: {instanceID: 11690}
+    - Class: 114
+      Script: {instanceID: 11764}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -387,6 +433,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SceneLoader
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
     className: CullingHandler
@@ -486,6 +538,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: RoomListCell
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LoadingUI
   - hash:
       serializedVersion: 2
       Hash: c87a2744a4fec8052f557862b102c4e4
@@ -650,6 +708,12 @@ ScriptsOnlyBuild:
     className: PunCockpitEmbed
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UIRoot
+  - hash:
+      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -726,6 +790,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: CurrentRoomIsOpenToggle
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NetworkManager
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -932,6 +1002,12 @@ ScriptsOnlyBuild:
     className: GameVersionProperty
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
       Hash: c380fc5ce39348202e0a58fe3e243a74
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.PunBasics
@@ -1004,6 +1080,12 @@ ScriptsOnlyBuild:
     className: SplineWalker
   - hash:
       serializedVersion: 2
+      Hash: 28c6ff13ee074fd4a3a33b64a2328763
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LobbyManager
+  - hash:
+      serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -1020,6 +1102,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Asteroids
     className: LobbyMainPanel
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TeamManager
   - hash:
       serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
@@ -1118,6 +1206,12 @@ ScriptsOnlyBuild:
     className: RoomListView
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SystemBoot
+  - hash:
+      serializedVersion: 2
       Hash: 0b24359b178f2110b72f9b386ac3b17c
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.PunBasics
@@ -1206,6 +1300,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.Cockpit
     className: PlayerListView
+  - hash:
+      serializedVersion: 2
+      Hash: 539a01f2257a6fe2f4f044c913268e9b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LobbyUI
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1302,6 +1402,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Demos.dll
     namespaceName: Photon.Pun.Demo.PunBasics
     className: GameManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CustomSingleton
   - hash:
       serializedVersion: 2
       Hash: 4c0ebd9e77f5bc0558d19d8313e54bb9
@@ -1511,52 +1617,11 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: SystemBoot
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: CustomSingleton
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SceneLoader
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: UIRoot
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameManager
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: LoadingUI
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: LobbyUI
-  - hash:
-      serializedVersion: 2
-      Hash: 9319d4b249065b364b188e59214947a6
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: NetworkManager
+    className: GameCore
   platform: 5
   scenePathNames:
   - Assets/Scenes/Launcher.unity
   - Assets/Scenes/Loading.unity
   - Assets/Scenes/Lobby.unity
+  - Assets/Scenes/Game.unity
   playerPath: "C:/Users/syk_0/Desktop/\uD53C\uCF54\uBAA8/Picosmos.exe"
